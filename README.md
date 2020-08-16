@@ -11,5 +11,5 @@ Build Notes for Alice:
 2. Write App.js with imports of components
 3. EmployeeList created with list of employees. Using classnames with TailwindCSS utility classes to style the app. Import GlobalState and useContext - built in React Hook that gives functional components access to the context. Imported here is the employees object; 'removeEmployee' and 'editEmployee' from 'GlobalState.js' file.
 4. Create a GlobalState file with a function to dispatch an action. Defined the initial state of the employee array, with hard code values in the object. The dispatch type calls the payload to be received.
-5. Create AppReducer file with CRUD functionality for each switch case which returns employee state inside each functions.
-6. Create AddEmployee component with an onSubmit handler to push the filled values of the form fields in to the state. setName|setLocation | setDesignation accesses the current value placed inside the form field; this is wrapped in a new constant newEmployee - with a unique id that increments 1 to the length.
+5. Create AppReducer file with CRUD functionality for each switch case which returns employee state inside each functions. Created, AddEmployee component with an onSubmit handler to push the filled values of the form fields in to the state. setName|setLocation | setDesignation accesses the current value placed inside the form field; this is wrapped in a new constant newEmployee - with a unique id that increments 1 to the length.
+7. Created the AppReducer

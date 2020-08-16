@@ -2,12 +2,12 @@ import React, { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
 
 const initialState = {
-  employees: [
+  guests: [
     {
       id: 1,
       name: 'Alice Jowsey',
       location: 'Kawatiri',
-      designation: 'Frontend Developer',
+      designation: 'Guest Speaker',
     },
   ],
 };
@@ -16,26 +16,26 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  function removeEmployee(id) {
+  function removeGuest(id) {
     dispatch({
-      type: 'REMOVE_EMPLOYEE',
+      type: 'REMOVE_GUEST',
       payload: id,
     });
   }
-  function addEmployee(employees) {
+  function addGuest(guests) {
     dispatch({
-      type: 'EDIT_EMPLOYEE',
-      payload: employees,
+      type: 'EDIT_GUEST',
+      payload: guests,
     });
   }
 
   return (
     <GlobalContext.Provider
       value={{
-        employees: state.employees,
-        removeEmployee,
-        addEmployee,
-        editEmployee,
+        guests: state.guests,
+        removeGuest,
+        addGuest,
+        editGuest,
       }}
     >
       {children}

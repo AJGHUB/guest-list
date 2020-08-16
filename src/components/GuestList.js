@@ -2,28 +2,28 @@ import React, { Fragment, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { Link } from "react-router-dom";
 
-export const EmployeeList = () => {
-  const { employees, removeEmployee, editEmployee } = useContext(GlobalContext);
+export const GuestList = () => {
+  const { guests, removeGuest, editGuest } = useContext(GlobalContext);
   return (
     <Fragment>
-      {employees.length > 0 ? (
+      {guests.length > 0 ? (
         <Fragment>
-          {employees.map(employee => (
+          {guests.map(guest => (
             <div
               className="flex items-center bg-gray-100 mb-10 shadow"
-              key={employee.id}
+              key={guest.id}
             >
               <div className="flex-auto text-left px-4 py-2 m-2">
-                <p className="text-gray-900 leading-none">{employee.name}</p>
-                <p className="text-gray-600">{employee.designation}</p>
+                <p className="text-gray-900 leading-none">{guest.name}</p>
+                <p className="text-gray-600">{guest.designation}</p>
                 <span className="inline-block text-sm font-semibold mt-1">
-                  {employee.location}
+                  {guest.location}
                 </span>
               </div>
               <div className="flex-auto text-right px-4 py-2 m-2">
-                <Link to={`/edit/${employee.id}`}>
+                <Link to={`/edit/${guest.id}`}>
                   <button
-                    onClick={() => editEmployee(employee.id)}
+                    onClick={() => editGuest(guest.id)}
                     className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold mr-3 py-2 px-4 rounded-full inline-flex items-center"
                   >
                     <svg
@@ -44,7 +44,7 @@ export const EmployeeList = () => {
                   </button>
                 </Link>
                 <button
-                  onClick={() => removeEmployee(employee.id)}
+                  onClick={() => removeGuest(guest.id)}
                   className="block bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-full inline-flex items-center"
                 >
                   <svg

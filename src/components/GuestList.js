@@ -1,6 +1,6 @@
-import React, { Fragment, useContext } from "react";
-import { GlobalContext } from "../context/GlobalState";
-import { Link } from "react-router-dom";
+import React, { Fragment, useContext } from 'react';
+import { GlobalContext } from '../context/GlobalState';
+import { Link } from 'react-router-dom';
 
 export const GuestList = () => {
   const { guests, removeGuest, editGuest } = useContext(GlobalContext);
@@ -8,7 +8,7 @@ export const GuestList = () => {
     <Fragment>
       {guests.length > 0 ? (
         <Fragment>
-          {guests.map(guest => (
+          {guests.map((guest) => (
             <div
               className="flex items-center bg-gray-100 mb-10 shadow"
               key={guest.id}

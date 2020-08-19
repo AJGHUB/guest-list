@@ -1,3 +1,5 @@
+import { GuestList } from '../components/GuestList';
+
 export default (state, action) => {
   switch (action.type) {
     case 'REMOVE_GUEST':
@@ -12,5 +14,20 @@ export default (state, action) => {
         ...state,
         employees: [...state.employees, action.payload],
       };
+    case 'EDIT_GUEST':
+      const updatedGuest = action.payload;
+
+      const updatedGuest = state.guests.map((guest) => {
+        if (guest.id === updatedGuest.id) {
+          return updatedEmployee;
+        }
+        return employee;
+      });
+      return {
+        ...state,
+        guests: updatedGuest,
+      };
+    default:
+      return state;
   }
 };

@@ -1,13 +1,11 @@
 export default (state, action) => {
   switch (action.type) {
-    case "REMOVE_GUEST":
+    case 'REMOVE_GUEST':
       return {
         ...state,
-        guests: state.guests.filter(
-          (guest) => guest.id !== action.payload
-        ),
+        guests: state.guests.filter((guest) => guest.id !== action.payload),
       };
-    case 'ADD_GUESTS':
+    case 'ADD_GUEST':
       return {
         ...state,
         guests: [...state.guests, action.payload],
@@ -24,9 +22,9 @@ export default (state, action) => {
 
       return {
         ...state,
-        guests: updatedGuests
+        guests: updatedGuests,
       };
-      
+
     default:
       return state;
   }

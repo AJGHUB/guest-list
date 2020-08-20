@@ -1,4 +1,4 @@
-import React { Fragment, useState, useContext, useEffect } from "react";
+import React, { Fragment, useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../context/GlobalState"; 
 import { useHistory, Link } from "react-router-dom";
 
@@ -17,7 +17,7 @@ useEffect(() => {
     const guestId = currentUserId;
     const selectedUser = guests.find(emp => emp.id === parseInt(guestId));
     setSelectedUser(selectedUser);
-}, []);
+}, [currentUserId, guests]); //error said to add these
 
 const onSubmit = e => {
     e.preventDefault();

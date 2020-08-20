@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
     export const AddGuest = () => {
         const [name, setName] = useState("");
@@ -12,7 +12,7 @@ import { useHistory } from "react-router-dom";
         const onSubmit = e => {
             e.preventDefault();
             const newGuest = {
-                id: guests.length + 1
+                id: guests.length + 1,
                 name,
                 location,
                 designation

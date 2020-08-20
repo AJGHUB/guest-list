@@ -2,7 +2,7 @@ import React { Fragment, useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../context/GlobalState"; //??????!!
 import { useHistory, Link } from "react-router-dom";
 
-export const Editguest = route => {
+export const EditGuest = route => {
     let history = useHistory();
     const { guests, editGuest } = useContext(GlobalContext);
     const [selectedUser, setSelectedUser ] = useState ({

@@ -13,3 +13,7 @@ Build Notes for Alice:
 4. Create a GlobalState file with a function to dispatch an action. Defined the initial state of the employee array, with hard code values in the object. The dispatch type calls the payload to be received.
 5. Create AppReducer file with CRUD functionality for each switch case which returns Guest state inside each functions.  
 7. Created the AddGuest component with an onSubmit handler that pushes the filled values of the form field into the state. setName|setLocation | setDesignation accesses the current value placed inside the form field; this is wrapped in a new constant newGuest - with a unique id that increments 1 to the length. GlobalContext has added parameter this accepts guests as a payload inside the GlobalState, the route to the landing page shows new guests.
+8. Creating EditGuest; The useEffect hook is invoked when the component is mounted. 
+-Inside this hook the current route parameter and the parameter to the guest object from the state. The setSelectUser function was created and this passes selectedUser as the parameter. Observing for an onChange events in the form fields where the userKEy and value are passed as two parameters. The selectedUser and set userKey are spread as a value from the input fields. Invoking the onSubmit event. 
+
+This is CRUD application using context API and hooks.

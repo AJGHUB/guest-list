@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Heading } from './Heading';
-import { Employeelist } from './Employeelist';
+import { GuestList } from './GuestList';
 
 export const Home = () => {
   return (
@@ -11,7 +11,7 @@ export const Home = () => {
             CRUD with React Context API and Hooks
           </h3>
           <Heading />
-          <Employeelist />
+          <GuestList />
         </div>
       </div>
     </Fragment>

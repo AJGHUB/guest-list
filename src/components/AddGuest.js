@@ -45,7 +45,7 @@ import { useHistory, Link } from "react-router-dom";
                             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                             htmlFor="location"
                             >
-                                Location
+                                From Location
                             </label>
                             <input
                                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:text-gray-600 focus:shadow-outline"
@@ -60,7 +60,7 @@ import { useHistory, Link } from "react-router-dom";
                              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                              htmlFor="designation"
                              >
-                                 Designation
+                                 Seating Designation
                              </label>
                              <input
                              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:text-gray-600"

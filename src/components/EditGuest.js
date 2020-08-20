@@ -1,5 +1,5 @@
 import React { Fragment, useState, useContext, useEffect } from "react";
-import { GlobalContext } from "../context/GlobalState"; //??????!!
+import { GlobalContext } from "../context/GlobalState"; 
 import { useHistory, Link } from "react-router-dom";
 
 export const EditGuest = route => {

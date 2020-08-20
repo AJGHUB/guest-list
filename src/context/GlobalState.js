@@ -1,13 +1,13 @@
-import React, { createContext, useReducer } from "react";
-import AppReducer from "./AppReducer";
+import React, { createContext, useReducer } from 'react';
+import AppReducer from './AppReducer';
 
 const initialState = {
   guests: [
     {
       id: 1,
-      name: "Alice Jowsey",
-      location: "Kawatiri",
-      designation: "Guest Speaker",
+      name: 'Alice Jowsey',
+      location: 'Kawatiri',
+      designation: 'Guest Speaker',
     },
   ],
 };
@@ -28,6 +28,12 @@ export const GlobalProvider = ({ children }) => {
       payload: guests,
     });
   }
+  function editGuest(guests) {
+    dispatch({
+      type: 'EDIT_GUESTS',
+      payload: guests,
+    });
+  }
 
   return (
     <GlobalContext.Provider
@@ -35,7 +41,7 @@ export const GlobalProvider = ({ children }) => {
         guests: state.guests,
         removeGuest,
         addGuest,
-        editGuest
+        editGuest,
       }}
     >
       {children}

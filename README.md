@@ -17,3 +17,15 @@ Build Notes for Alice:
 -Inside this hook the current route parameter and the parameter to the guest object from the state. The setSelectUser function was created and this passes selectedUser as the parameter. Observing for an onChange events in the form fields where the userKEy and value are passed as two parameters. The selectedUser and set userKey are spread as a value from the input fields. Invoking the onSubmit event. 
 
 This is CRUD application using context API and hooks.
+
+Fixed BUG: Had to move the if statement as it was checking to value of the selectedUser.id on the first life cycle of the component. The useEffect was getting the id of the state which did not make sense - as I was always checking the selectedUser.id to be null; 
+
+Refactored:
+ const currentUserId = route.match.params.id
+  const user = guests.find((emp) => emp.id === parseInt(currentUserId))
+  useEffect(() => {
+    setSelectedUser(user)
+  }, [user]) 
+  if (!selectedUser || !user.id) {
+    alert('ID does not match!')
+  }

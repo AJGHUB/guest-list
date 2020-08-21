@@ -12,12 +12,15 @@ export const EditGuest = route => {
     location: ""
     });
 const currentUserId = route.match.params.id;
+const user = guests.find((emp) => emp.id === parseInt(currentUserId))
 
 useEffect(() => {
-    const guestId = currentUserId;
-    const selectedUser = guests.find(emp => emp.id === parseInt(guestId));
-    setSelectedUser(selectedUser);
-}, [currentUserId, guests]); //error said to add these
+    setSelectedUser(user);
+}, [user]); 
+
+if(!user || !user.id) {
+    alert("ID does not match!");
+}
 
 const onSubmit = e => {
     e.preventDefault();
@@ -28,9 +31,7 @@ const onSubmit = e => {
 const handleOnChange = (userKey, value) =>
 setSelectedUser({ ...selectedUser, [userKey]: value });
 
-if(!selectedUser || !selectedUser.id) {
-    alert("ID does not match!");
-}
+
 
 return (
     <Fragment>

@@ -30,7 +30,7 @@ export const GlobalProvider = ({ children }) => {
   }
   function editGuest(guests) {
     dispatch({
-      type: 'EDIT_GUESTS',
+      type: 'EDIT_GUEST',
       payload: guests,
     });
   }

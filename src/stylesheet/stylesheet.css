@@ -22,6 +22,8 @@ html {
 
 body {
   margin: 0;
+  background-color: #00c0c7;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png"); 
 }
 
 /**
@@ -63952,4 +63954,20 @@ video {
     -webkit-transition-duration: 1000ms;
     transition-duration: 1000ms;
   }
+}
+
+.heading {
+  background-color: #00fcef60;
+  background-image: url("https://www.transparenttextures.com/patterns/candyhole.png");
+  padding: 25px;
+  border-radius: .5rem;
+}
+
+.titleguestlist {
+  background-color: #00fcef4b;
+  background-image: url("https://www.transparenttextures.com/patterns/candyhole.png");
+  padding: 5px;
+  border-radius: .5rem;
+  background-color: #00fcef;
+  background-image: url("https://www.transparenttextures.com/patterns/candyhole.png"); 
 }

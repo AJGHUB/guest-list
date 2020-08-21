@@ -1,6 +1,9 @@
-REACT Hooks CRUD A simple CRUD app. With users, the users can add, update, or delete users. This build utilizes React hooks and the Context API, to build a fully functional CRUD application. Tailwind CSS is used for the styling of this app, and Create React App sets up the project. THis is a GUEST list MVP 
+REACT Hooks CRUD A simple CRUD app. With users, the users can add, update, or delete users. This build utilizes React hooks and the Context API, to build a fully functional CRUD application. Tailwind CSS is used for the styling of this app, and Create React App sets up the project. MVP: This is a GUEST list for events. 
 
-Purpose and learning of this build: This build is not using any external API calls but uses hard-coded objects which will serve as the state. The introduction of the Context API solves one major problem: 'prop drilling'. The process of getting our data from one component to another through layers of nested deep components. Whereas Hooks helps us, React developers, by allowing us to use a functional rather than class-based components. Where we needed to utilize a lifecycle method, we had to use a class-based approach. And we now no longer have to call super(props) or worry about binding methods or the this keyword. The core implementation is just a function. Not a method. Not a class. Not a framework. Just a function. source-credit https://www.digitalocean.com/community/tutorials/react-crud-context-hooks
+Purpose and learning of this build: This build is not using any external API calls but uses hard-coded objects which will serve as the state. The introduction of the Context API solves one major problem: 'prop drilling'. The process of getting the data from one component to another through layers of nested deep components. Whereas Hooks helps, React developers, by allowing the use of functional rather than class-based components. Where I needed to utilize a lifecycle method, I had to use a class-based approach. And I now no longer have to call super(props) or worry about binding methods or the this keyword. 
+
+"The core implementation is just a function. Not a method. Not a class. Not a framework. Just a function." source-credit https://www.digitalocean.com/community/tutorials/react-crud-context-hooks
+This is CRUD application using context API and hooks.
 
 Build Notes for Alice:
 
@@ -16,7 +19,6 @@ Build Notes for Alice:
 8. Creating EditGuest; The useEffect hook is invoked when the component is mounted. 
 -Inside this hook the current route parameter and the parameter to the guest object from the state. The setSelectUser function was created and this passes selectedUser as the parameter. Observing for an onChange events in the form fields where the userKEy and value are passed as two parameters. The selectedUser and set userKey are spread as a value from the input fields. Invoking the onSubmit event. 
 
-This is CRUD application using context API and hooks.
 
 Fixed BUG: Had to move the if statement as it was checking to value of the selectedUser.id on the first life cycle of the component. The useEffect was getting the id of the state which did not make sense - as I was always checking the selectedUser.id to be null; 
 
